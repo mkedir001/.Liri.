@@ -88,7 +88,7 @@ request("http://www.omdbapi.com/?t=" + command2 + "&y=&plot=short&apikey=trilogy
         console.log(movieresponse.Country);
         console.log(movieresponse.imdbRating);
         console.log(movieresponse.Language);
-        console.log(movieresponse.rottentomatoes);
+        console.log(movieresponse.Ratings[1]);
         console.log(movieresponse.Actors);
         console.log(movieresponse.Plot);
     }
