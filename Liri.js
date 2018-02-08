@@ -95,5 +95,16 @@ request("http://www.omdbapi.com/?t=" + command2 + "&y=&plot=short&apikey=trilogy
 });
 }
 
+function doIt(command2){
+    fs.readFile("random.txt", "utf8", function(error, data){
+        if(!error){
+            doItResults = data.split(",");
+            command2 = doItResults[1];
+            console.log(command2);
+            getSpotify(command2);
+        }
+    })
+}
+
 
 
