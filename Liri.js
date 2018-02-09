@@ -83,14 +83,14 @@ request("http://www.omdbapi.com/?t=" + command2 + "&y=&plot=short&apikey=trilogy
       var movieresponse = JSON.parse(body);
         // Parse the body of the site and recover just the imdbRating
         // (Note: The syntax below for parsing isn't obvious. Just spend a few moments dissecting it).
-        console.log(movieresponse.Title);
-        console.log(movieresponse.Year);
-        console.log(movieresponse.Country);
-        console.log(movieresponse.imdbRating);
-        console.log(movieresponse.Language);
-        console.log(movieresponse.Ratings[1]);
-        console.log(movieresponse.Actors);
-        console.log(movieresponse.Plot);
+          console.log("Tittle: " + movieresponse.Title);
+        console.log("Year: " + movieresponse.Year);
+        console.log("Country: " + movieresponse.Country);
+        console.log("IMDB Rating: " + movieresponse.imdbRating);
+        console.log("Language: " + movieresponse.Language);
+        console.log("Rotten Tomatoes Rating: " + movieresponse.Ratings[1].Value);
+        console.log("Actors: " + movieresponse.Actors);
+        console.log("Plot: " + movieresponse.Plot);
     }
 });
 }
